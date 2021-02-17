@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background: #f79ca3;
+}
+
+/*create the ball object*/
+.ball {
+  background: #1111f0;
+  background: linear-gradient(80deg, #1111f0, #d0d7f2);
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  height: 350px;
+  width: 350px;
+  animation-name: bouncing;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+/*creat the shadow object*/
+.shadow {
+  background: black;
+  margin: 0;
+  border-radius: 50%;
+  height: 25px;
+  width: 350px;
+  animation-name: ballShadow;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+/* animate the ball*/
+@keyframes bouncing {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(220px) translateX(250px);
+  }
+  20% {
+    transform: translateY(-75px) translateX(500px);
+  }
+  30% {
+    transform: translateY(220px) translateX(750px);
+  }
+  40% {
+    transform: translateY(-75px) translateX(925px);
+  }
+  55% {
+    transform: translateY(220px) translateX(750px);
+  }
+  70% {
+    transform: translateY(-25px) translateX(500px);
+  }
+  85% {
+    transform: translateY(220px) translateX(250px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*animate the shadow*/
+@keyframes ballShadow {
+  0% {
+    transform: translateY(220px);
+  }
+  10% {
+    transform: translateY(220px) translateX(250px);
+  }
+  20% {
+    transform: translateY(220px) translateX(500px);
+  }
+  30% {
+    transform: translateY(220px) translateX(750px);
+  }
+  40% {
+    transform: translateY(220px) translateX(925px);
+  }
+  55% {
+    transform: translateY(220px) translateX(750px);
+  }
+  70% {
+    transform: translateY(220px) translateX(500px);
+  }
+  85% {
+    transform: translateY(220px) translateX(250px);
+  }
+  100% {
+    transform: translateY(220px) translateX(0px);
+  }
+}
